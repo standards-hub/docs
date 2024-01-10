@@ -7,6 +7,10 @@ export default defineAppConfig({
         left: 'text-sm text-gray-500 dark:text-gray-400',
         wrapper: 'border-t border-gray-200 dark:border-gray-800'
       }
+    },
+    container: {
+      constrained: 'max-w-full',
+      padding: 'px-2 lg:px-2 sm:px-4'
     }
   },
   seo: {
