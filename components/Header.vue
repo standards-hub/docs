@@ -6,11 +6,17 @@ const navigation = inject<NavItem[]>('navigation', [])
 const { header } = useAppConfig()
 
 const links = [{
+  label: 'Home',
+  to: '/getting-started/'
+}, {
   label: 'Markdown',
   to: '/markdown-guidelines/introduction/'
 }, {
   label: 'GitHub',
   to: '/github-guidelines/github/'
+}, {
+  label: 'Processes',
+  to: '/processes/introduction/'
 }]
 
 </script>
