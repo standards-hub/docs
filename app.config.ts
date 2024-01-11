@@ -12,6 +12,15 @@ export default defineAppConfig({
       constrained: 'max-w-full',
       padding: 'px-2 lg:px-2 sm:px-4'
     },
+    content: {
+      prose: {
+        code: {
+          icon: {
+            facebook: 'i-simple-icons-facebook'
+          }
+        }
+      }
+    }
   },
   seo: {
     siteName: 'Standards-Hub Docs',
