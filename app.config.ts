@@ -11,6 +11,15 @@ export default defineAppConfig({
     container: {
       constrained: 'max-w-full',
       padding: 'px-2 lg:px-2 sm:px-4'
+    },
+    content: {
+      prose: {
+        code: {
+          icon: {
+            facebook: 'i-simple-icons-facebook'
+          }
+        }
+      }
     }
   },
   seo: {
