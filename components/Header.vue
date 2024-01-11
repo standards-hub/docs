@@ -7,7 +7,7 @@ const { header } = useAppConfig()
 
 const links = [{
   label: 'Home',
-  to: '//'
+  to: '/'
 }, {
   label: 'Markdown',
   to: '/markdown-guidelines/introduction/'
