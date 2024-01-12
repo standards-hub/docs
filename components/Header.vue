@@ -22,20 +22,22 @@ const links = [{
 </script>
 
 <template>
-  <UHeader >
+  <UHeader class="h-20">
 
     <template #logo>
-      <Logo class="w-auto h-6" />
-      <img src="/images/S-H logo.png" class="h-8 rounded-full" height="70" width="40" alt="Standards-Hub">
+      <Logo class="h-10" />
+      <img src="/images/S-H logo.png" class="rounded-full" height="70" width="40" alt="Standards-Hub">
         Standards-Hub
     </template>
 
     <template #center>
-      <UHeaderLinks :links="links" class="hidden lg:flex" /> <!-- this class allows links to be hidden in mobile preview -->
+      <div class="grid grid-flow-row -mb-5">
+        <UDocsSearchButton label="Search..." class="mb-2"/>    
+        <UHeaderLinks :links="links" class="hidden lg:flex"/> <!-- this class allows links to be hidden in mobile preview -->
+      </div>
     </template>
 
-    <template #right>
-      <UDocsSearchButton label="" />
+    <template #right class="h-10">
       <UColorModeButton />
       <UButton to="https://github.com/standards-hub" target="_blank" icon="i-simple-icons-github" color="gray" variant="ghost" />
     </template>
