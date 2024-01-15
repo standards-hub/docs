@@ -30,7 +30,7 @@ defineOgImage({
         </UBadge>
       </template>
 
-      <template #title>
+      <template #title >
         <MDC :value="page.hero.title" />
       </template>
 
@@ -38,18 +38,9 @@ defineOgImage({
     </ULandingHero>
 
     <ULandingSection :title="page.features.title" :links="page.features.links">
-      <div class="flex justify-center">   
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-7 xl:grid-cols-4 xl:gap-10 mx-10">
-            <ULandingCard class="flex" v-for="(item, index) of page.features.items" :key="index" v-bind="item" />
-        </div>
-      </div> 
+      <div class="flex flex-wrap justify-center mx-auto">
+        <ULandingCard class="flex-none w-full sm:w-1/2  lg:w-1/3 xl:w-1/3 mx-12 my-10" v-for="(item, index) of page.features.items" :key="index" v-bind="item" />
+      </div>  
     </ULandingSection>
   </div>
 </template>
-
-<!-- 
-  flex-wrap mx-auto
-  
-columns-1 md:columns-2 xl:columns-3 2xl:columns-4
-text-center
--->

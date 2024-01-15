@@ -42,7 +42,7 @@ features:
       icon: 'i-simple-icons-github'
       to: '/github-guidelines/github'
       target: '_blank'  
-    - title: 'Markdown guidelineezezezs'
+    - title: 'Markdown guidelines'
       description: 'Write your pages with MDC thanks to Nuxt Content.'
       icon: 'i-simple-icons-markdown'
       to: '/markdown-guidelines/introduction'
