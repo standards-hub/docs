@@ -1,5 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  vue: {  
+    compilerOptions: {
+      isCustomElement: (tag: string) => tag.startsWith('Logo' && 'Alert'),
+    },
+  },
   extends: ['@nuxt/ui-pro'],
   modules: [
     '@nuxt/content',
@@ -12,7 +17,7 @@ export default defineNuxtConfig({
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
     'components:extend': (components) => {
-      const globals = components.filter((c) => ['UButton'].includes(c.pascalName))
+      const globals = components.filter((c) => ['UButton', 'UAlert', 'UIcon', 'Alert'].includes(c.pascalName))
 
       globals.forEach((c) => c.global = true)
     }
