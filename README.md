@@ -81,6 +81,8 @@ export default defineNuxtConfig({
 })
 ```
 
+
+
 Read more on [Nuxt Studio docs](https://nuxt.studio/docs/projects/setup).
 
 ## Renovate integration
