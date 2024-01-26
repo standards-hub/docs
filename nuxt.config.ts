@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
     'components:extend': (components) => {
-      const globals = components.filter((c) => ['UButton'].includes(c.pascalName))
+      const globals = components.filter((c) => ['UButton', 'Video', 'NuxtLink'].includes(c.pascalName))
 
       globals.forEach((c) => c.global = true)
     }
@@ -39,7 +39,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       gtm: {
-        id: 'GTM-xxxxxx',
+        id: 'GTM-1111111110',
         queryParams: {
           gtm_auth: 'AB7cDEf3GHIjkl-MnOP8qr',
           gtm_preview: 'env-4',
