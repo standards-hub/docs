@@ -1,17 +1,19 @@
 <template>
-  <div class="w-3/6 mx-0">
+  <div class="mx-0 p-2">
     <UAlert
       :title="title"
       :description="description"
       :type="type"
       :icon="getIconAndColor().icon"
       :color="getIconAndColor().color"
-      variant="solid"
+      variant="soft"
     />
   </div>
 </template>
 
 <script setup>
+import { darkMode } from '#tailwind-config';
+
 const props = defineProps({
   title: String,
   description: String,
@@ -27,13 +29,13 @@ const getIconAndColor = () => {
     success: { icon: "i-heroicons-check-circle", color: "emerald" },
     warning: { icon: "i-heroicons-exclamation-circle", color: "yellow" },
     danger: { icon: "i-heroicons-x-circle", color: "red" },
-    wrongType: { icon: "i-heroicons-question-mark-circle", color: "white", title: "Unrecognized Alert type!Please try with *info*, *success*, *warning* or *danger*."},
+    wrongType: { icon: "i-heroicons-question-mark-circle", color: "white"},
   };
 
   if (typeInfo[props.type]) {
     return { icon: typeInfo[props.type].icon, color: typeInfo[props.type].color };
   } else {
-    return { icon: typeInfo.wrongType.icon, color: typeInfo.wrongType.color, title: typeInfo.wrongType.title};
+    return { icon: typeInfo.wrongType.icon, color: typeInfo.wrongType.color};
   }
 };
 </script>
