@@ -24,8 +24,7 @@ const links = [{
 <template>
   <UHeader class="h-20">
 
-    <template #logo>
-      <Logo class="h-10" />
+    <template #logo> 
       <img src="/images/S-H logo.png" class="rounded-full" height="70" width="40" alt="Standards-Hub">
         Standards-Hub
     </template>
