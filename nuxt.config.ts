@@ -13,13 +13,14 @@ export default defineNuxtConfig({
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
     'components:extend': (components) => {
-      const globals = components.filter((c) => ['UButton'].includes(c.pascalName))
+      const globals = components.filter((c) => ['UButton', 'UAlert', 'UIcon', 'ShAlert'].includes(c.pascalName))
 
       globals.forEach((c) => c.global = true)
     }
   },
   ui: {
-    icons: ['heroicons', 'simple-icons']
+    icons: ['heroicons', 'simple-icons'],
+    safelistColors: ['blue', 'emerald', 'yellow', 'red', 'white']//colors used as props in ShAlert component
   },
   // Fonts
   fontMetrics: {
