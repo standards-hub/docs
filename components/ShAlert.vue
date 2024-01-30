@@ -12,7 +12,6 @@
 </template>
 
 <script setup>
-import { darkMode } from '#tailwind-config';
 
 const props = defineProps({
   title: String,
@@ -21,6 +20,7 @@ const props = defineProps({
     type: String, // Make sure type is expected as a string
     default: 'info', // Set a default type if needed
   },
+  color: String
 });
 
 const getIconAndColor = () => {
