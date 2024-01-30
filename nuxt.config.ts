@@ -10,6 +10,21 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     '@zadigetvoltaire/nuxt-gtm'
   ],
+  content: {
+    highlight: {
+      // Theme used in all color schemes.
+      //theme: 'github-light'
+      // OR
+      theme: {
+        // Default theme (same as single string)
+        default: 'github-light',
+        // Theme used if `html.dark`
+        dark: 'github-dark',
+        // Theme used if `html.sepia`
+        sepia: 'monokai'
+      }
+    }
+  },
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
     'components:extend': (components) => {
@@ -40,7 +55,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       gtm: {
-        id: 'GTM-xxxxxx',
+        id: 'GTM-1111111110',
         queryParams: {
           gtm_auth: 'AB7cDEf3GHIjkl-MnOP8qr',
           gtm_preview: 'env-4',
