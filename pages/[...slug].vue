@@ -44,7 +44,7 @@ const links = computed(() => [toc?.bottom?.edit && {
 </script>
 
 <template>
-  <UPage :ui="{ wrapper: 'flex flex-col lg:grid lg:grid-cols-12 lg:gap-6', center: { narrow: 'lg:col-span-10', base: 'lg:col-span-10', full: 'lg:col-span-12' } }">
+  <UPage :ui="{ wrapper: 'flex flex-col lg:grid lg:grid-cols-12 lg:gap-6 mx-10', center: { narrow: 'lg:col-span-10', base: 'lg:col-span-10', full: 'lg:col-span-12' } }">
     <UPageHeader :title="page.title" :description="page.description" :links="page.links" :headline="headline" />
 
     <UPageBody prose>

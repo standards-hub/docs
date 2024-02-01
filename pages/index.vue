@@ -16,7 +16,7 @@ defineOgImage({
 </script>
 
 <template>
-  <div>
+  <div class="mx-10">
     <ULandingHero v-if="page.hero" v-bind="page.hero">
       <template #headline>
         <UBadge v-if="page.hero.headline" variant="subtle" size="lg" class="relative rounded-full font-semibold">
