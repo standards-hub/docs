@@ -1,8 +1,8 @@
 <template>
-  <header class="h-8 w-full bg-zinc-200 dark:bg-slate-800 text-xs italic flex items-center">
+  <header class="h-8 p-4 w-full bg-zinc-200 dark:bg-slate-800 text-xs italic flex items-center">
     <nuxt-link to="/">HOME</nuxt-link>
     <span v-for="(crumb, index) in breadcrumbs" :key="index">
-      >
+      &nbsp; / &nbsp;
       <template v-if="crumb.to">
         <nuxt-link :to="crumb.to">{{ crumb.label.toUpperCase() }}</nuxt-link>
       </template>
