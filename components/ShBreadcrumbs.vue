@@ -45,4 +45,7 @@ export default {
 .active {
   color: blue; /*change the color of active breadcrumb*/
 }
+.dark .active {
+    color: lightskyblue; /* change the color of active breadcrumb in dark mode */
+  }
 </style>
