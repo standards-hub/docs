@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     '@nuxtjs/fontaine',
     '@nuxtjs/google-fonts',
     'nuxt-og-image',
-    '@zadigetvoltaire/nuxt-gtm'
+    '@zadigetvoltaire/nuxt-gtm',
+    'nuxt-testimonial'
   ],
   content: {
     highlight: {
@@ -29,7 +30,7 @@ export default defineNuxtConfig({
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
     'components:extend': (components) => {
 
-      const globals = components.filter((c) => ['UButton', 'UAlert', 'UIcon', 'ShAlert','ShVideo'].includes(c.pascalName))
+      const globals = components.filter((c) => ['UButton', 'UAlert', 'UIcon', 'ShAlert','ShVideo', 'ShTweet', 'ShLinkedin', 'ShFacebook'].includes(c.pascalName))
 
 
       globals.forEach((c) => c.global = true)
