@@ -25,7 +25,6 @@
     "@nuxt/devtools": "1.0.6",
     "@nuxt/eslint-config": "^0.2.0",
     "@nuxthq/studio": "^1.0.6",
-    "@zadigetvoltaire/nuxt-gtm": "^0.0.13",
     "eslint": "^8.56.0",
     "nuxt-testimonial": "^1.0.6",
     "typescript": "^5.3.3",
