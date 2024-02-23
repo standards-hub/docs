@@ -2,36 +2,19 @@
 
 ## Quick Start
 
-If you want a fresh start, install Nuxt UI Pro
-
-```bash [Terminal]
-npx nuxi init -t github:nuxt-ui-pro/docs
-```
-
-or you can just fork it or clone it either from our site or from official site
+For a quick start clone our repository 
 
 ```bash [Terminal]
 git clone https://github.com/standards-hub/docs.git
 ```
 
-## Setup
-
 Make sure to install the dependencies after installing/cloning the app
+> Make sure you are using at least Node `v20.0.0`
 
 ```bash
 # npm
 npm install
 ```
-
-## Changing environment from default state
-
-### Changing the landing page
-In this section we adress several things:
-- Header (changing Logo)
-- Main section (changing text and cards)
-- Footer (changing text and links to social media)
-
-
 
 ## Development Server
 

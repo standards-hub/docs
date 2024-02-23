@@ -17,6 +17,9 @@ const links = [{
 }, {
   label: 'Processes',
   to: '/processes/introduction/'
+},{
+  label: 'Setup',
+  to: '/setup/'
 }]
 
 </script>
