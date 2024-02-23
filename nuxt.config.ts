@@ -74,7 +74,7 @@ export default defineNuxtConfig({
         loadScript: true,/* Whether or not to load the GTM Script (Helpful if you are including GTM manually,
         but need the dataLayer functionality in your components) (optional) */
         enableRouterSync: true,/* Pass the router instance of your app to automatically sync with router (optional) */
-        ignoredViews: false,/* Don't trigger events for specified router names (optional) */
+        ignoredViews: [],/* Don't trigger events for specified router names (optional) */
         trackOnNextTick: false,/* Whether or not call trackView in Vue.nextTick */
         devtools: true,/* (optional) */
       }
