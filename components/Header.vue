@@ -18,6 +18,9 @@ const links = [{
   label: 'Processes',
   to: '/processes/introduction/'
 },{
+  label: 'Markdown Constructors',
+  to: '/elastic-hub/markdown-constructors/'
+},{
   label: 'Setup',
   to: '/setup/'
 }]
