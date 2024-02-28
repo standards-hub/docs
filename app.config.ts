@@ -16,7 +16,8 @@ export default defineAppConfig({
       prose: {
         code: {
           icon: {
-            facebook: 'i-simple-icons-facebook'
+            facebook: 'i-simple-icons-facebook',
+            check: 'i-heroicons-check-badge',
           }
         }
       }
