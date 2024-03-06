@@ -1,3 +1,5 @@
+import { _size } from "#tailwind-config/theme"
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
@@ -40,15 +42,12 @@ export default defineNuxtConfig({
     safelistColors: ['blue', 'emerald', 'yellow', 'red', 'white']//colors used as props in ShAlert component
   },
   // Fonts
-  fontMetrics: {
-    fonts: ['DM Sans']
-  },
   googleFonts: {
     display: 'swap',
     download: true,
     families: {
-      'Roboto': [400, 500, 600, 700]
-    }
+      'DM Sans': [400, 500, 600, 700]
+    },
   },
   routeRules: {
     '/api/search.json': { prerender: true },
