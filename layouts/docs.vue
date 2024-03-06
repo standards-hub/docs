@@ -12,7 +12,7 @@ const navigation = inject<Ref<NavItem[]>>('navigation')
       <UPage :ui="{ wrapper: 'flex flex-col lg:grid lg:grid-cols-12 lg:gap-8 mx-7', center: { narrow: 'lg:col-span-10', base: 'lg:col-span-10', full: 'lg:col-span-12' } }">
         <template #left>
           <UAside>
-            <UNavigationTree :links="mapContentNavigation(navigation)" />
+            <UNavigationTree :links="mapContentNavigation(navigation)" :multiple="false" default-open />
           </UAside>
         </template>
 
