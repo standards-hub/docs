@@ -18,49 +18,30 @@ export default {
     };
   },
 
-  // setup() {
-  //   const currentFilePath = ref('')
-  //   const route = useRoute()
-
-  //   onMounted(() => {
-  //     const routeParams = route.params
-  //     const filePath = buildFilePath(routeParams)
-
-  //     currentFilePath.value = filePath
-  //   })
-  //   const buildFilePath = (routeParams) => {
-  //     const { section, subSection } = routeParams
-
-  //     const filePath = `/content/${section}/${subSection}`
-
-  //     return filePath
-  //   }
-
-  //   return {currentFilePath}
-  // },
-
-
   async created() {
     try {
-      
+      const route = useRoute();
+      const currentFilePath = this.$route.path;
+      console.log(currentFilePath);
 
       const owner = "standards-hub";
       const repo = "docs";
 
-      const apiUrl = `https://api.github.com/repos/${owner}/${repo}/commits?path=content/1.getting-started/1.index.md`;
-      
+      const apiUrl = `https://api.github.com/repos/${owner}/${repo}/commits?path=/content${currentFilePath}`;
+      console.log(apiUrl);
+
       const response = await axios.get(apiUrl);
       const lastCommitDate = response.data[0]?.commit?.author?.date;
 
       if (lastCommitDate) {
         const dateObject = new Date(lastCommitDate);
-        const formattedDate = dateObject.toLocaleString('en-US', {
-          day: '2-digit',
-          month: 'short',
-          year: 'numeric',
-          hour: '2-digit',
-          minute: '2-digit',
-          timeZoneName: 'short',
+        const formattedDate = dateObject.toLocaleString("en-US", {
+          day: "2-digit",
+          month: "short",
+          year: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+          timeZoneName: "short",
         });
 
         this.lastCommitDate = formattedDate;
@@ -74,7 +55,7 @@ export default {
       this.loading = false;
     }
   },
-}
+};
 </script>
 
 <style></style>
