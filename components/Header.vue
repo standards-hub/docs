@@ -10,16 +10,16 @@ const links = [{
   to: '/'
 }, {
   label: 'Markdown',
-  to: '/markdown-guidelines/introduction/'
+  to: '/fa/markdown-guidelines/introduction/'
 }, {
   label: 'GitHub',
-  to: '/github-guidelines/github/'
+  to: '/la/github-guidelines/github/'
 }, {
   label: 'Processes',
   to: '/processes/introduction/'
 },{
   label: 'Markdown Constructors',
-  to: '/elastic-hub/markdown-constructors/'
+  to: '/ra/elastic-hub/markdown-constructors/'
 },{
   label: 'Setup',
   to: '/setup/'

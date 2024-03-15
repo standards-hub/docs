@@ -1,4 +1,5 @@
 import { _size } from "#tailwind-config/theme"
+import { resolve } from "node:path";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -14,6 +15,29 @@ export default defineNuxtConfig({
   ],
   css: ['~/assets/css/main.css'],
   content: {
+    sources: {    
+     content: {
+        driver: 'fs',
+        prefix: '/content-start', // All contents inside this source will be prefixed with `/docs`
+        base: resolve(__filename,'content')
+      },
+      // Additional sources
+      fa: {
+        driver: 'fs',
+        prefix: '/fa', // All contents inside this source will be prefixed with `/fa`
+        base: resolve(__dirname,'content-fa') // Path for source directory. This needs to be in accordance with folder name
+      },
+      la: {
+        driver: 'fs',
+        prefix: '/la', // All contents inside this source will be prefixed with `/la`
+        base: resolve(__dirname,'content-la') // Path for source directory. This needs to be in accordance with folder name
+      },
+      ra: {
+        driver: 'fs',
+        prefix: '/ra', // All contents inside this source will be prefixed with `/ra`
+        base: resolve(__dirname,'content-ra') // Path for source directory. This needs to be in accordance with folder name
+      },
+    },
     highlight: {
       // Theme used in all color schemes.
       //theme: 'github-light'
