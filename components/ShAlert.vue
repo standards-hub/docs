@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center space-x-1" :class="alertClasses">
+  <div id="alert" class="flex items-center space-x-1" :class="alertClasses">
     <div class="flex items-center mx-2">
       <i :class="iconClass" class="size-6"></i>
     </div>
@@ -45,3 +45,9 @@ export default {
   },
 };
 </script>
+
+<style>
+#alert {
+  font-family: "DM Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+</style>

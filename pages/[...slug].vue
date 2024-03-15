@@ -74,4 +74,7 @@ const links = computed(() => [toc?.bottom?.edit && {
 code {
   font-family: "DM Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
+pre {
+  font-family: "DM Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
 </style>
