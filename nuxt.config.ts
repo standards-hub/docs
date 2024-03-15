@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     'nuxt-testimonial'
   ],
+  css: ['~/assets/css/main.css'],
   content: {
     highlight: {
       // Theme used in all color schemes.
@@ -46,7 +47,8 @@ export default defineNuxtConfig({
     display: 'swap',
     download: true,
     families: {
-      'DM Sans': [400, 500, 600, 700]
+      'DM Sans': [400, 500, 600, 700],
+      'DM Mono': [400, 500],
     },
   },
   routeRules: {
