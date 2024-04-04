@@ -33,12 +33,18 @@ export default {
   },
   computed: {
     textPositionClass() {
-      return this.textPosition === 'left' ? 'col-start-1' : 'col-start-3'
+      if (this.textPosition === 'right' && this.textSpan === 'xl') {
+        return 'col-start-2'
+      } else if (this.textPosition === 'left') {
+        return 'col-start-1'
+      } else {
+        return 'col-start-3'
+      }
     },
     textSpanClass() {
       switch (this.textSpan) {
         case 'm':
-        if (this.textPosition === 'left') {
+          if (this.textPosition === 'left') {
             return 'col-start-1 col-span-1'
           } else {
             return 'col-start-4 col-span-1'
@@ -68,7 +74,11 @@ export default {
       }
     },
     imgPositionClass() { //depending on the textPosition, the image will be placed on the opposite side
-      return this.textPosition === 'left' ? 'col-start-3' : 'col-start-1'
+      if (this.textPosition === 'left' && this.textSpan === 'm') {
+        return 'col-start-2'
+      } else if (this.textPosition === 'right') {
+        return 'col-start-1'
+      }
     },
     imgSpanClass() { //depending on the textSpan and textPosition, the image will take the remaining space
       if (this.textSpan === 'xl' && this.textPosition === 'left') {
@@ -91,4 +101,3 @@ export default {
   }
 }
 </script>
-
