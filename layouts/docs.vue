@@ -6,7 +6,7 @@ const navigation = inject<Ref<NavItem[]>>('navigation')
 
 <template>
   <div >
-    <ShBreadcrumbs class="fixed z-20 top-20"/>
+    <ShBreadcrumbs class="sticky z-20 top-20"/>
   <div class="relative mt-8">
     <UContainer>
       <UPage :ui="{ wrapper: 'flex flex-col lg:grid lg:grid-cols-12 lg:gap-8 mx-7', center: { narrow: 'lg:col-span-10', base: 'lg:col-span-10', full: 'lg:col-span-12' } }">
