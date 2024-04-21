@@ -31,7 +31,8 @@ const links = [{
   <ShAdditionalMenu
     logoLink="https://logopond.com/logos/084cda3282cffef573b9000219bacfe0.png"
     buttonLabel="Click me!" 
-    :daysToShow="6" />
+    :daysToShow= 2 
+    bannerText="Promotion period. Ends in:" />
   <UHeader class="h-20">
 
     <template #logo> 
