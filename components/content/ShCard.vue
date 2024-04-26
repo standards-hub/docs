@@ -8,25 +8,22 @@
             </div>
         </div>
         <div class="row-start-2 p-6">
-            <NuxtLink v-if="title" :to="titleLink">
-                <p class="text-3xl font-extrabold">{{ title }}</p>
+            <NuxtLink :to="titleLink">
+                <p class="text-3xl font-extrabold"><slot name="title" /></p><!-- title -->
             </NuxtLink>
-            <p v-if="subtitle" class="text-xl font-semibold text-gray-600 dark:text-gray-400">{{ subtitle }}</p>
-            <p>{{ textArea }}</p>
+            <p class="text-xl font-semibold text-gray-600 dark:text-gray-400"><slot name="subtitle" /></p><!-- subtitle -->
+            <p><slot /></p><!-- text (default slot) -->
             <div class="grid grid-cols-3">
-                <p v-if="leftLabel" class="col-start-1 text-lg justify-self-start text-gray-600 dark:text-gray-400">{{
-                    leftLabel }}</p>
-                <p v-if="centerLabel" class="col-start-2 text-lg justify-self-center text-gray-600 dark:text-gray-400">
-                    {{ centerLabel }}</p>
-                <p v-if="rightLabel" class="col-start-3 text-lg justify-self-end text-gray-600 dark:text-gray-400">{{
-                    rightLabel }}</p>
+                <p class="col-start-1 text-lg justify-self-start text-gray-600 dark:text-gray-400">
+                    <slot name="left" /></p><!-- left label -->
+                <p class="col-start-2 text-lg justify-self-center text-gray-600 dark:text-gray-400">
+                    <slot name="center" /></p><!-- center label -->
+                <p class="col-start-3 text-lg justify-self-end text-gray-600 dark:text-gray-400">
+                    <slot name="right" /></p><!-- right label -->
             </div>
         </div>
     </div>
 </template>
-
-
-
 
 <script>
 export default {
@@ -34,28 +31,10 @@ export default {
         imageLink: {
             type: String,
         },
-        title: {
-            type: String,
-        },
         titleLink: {
             type: String,
         },
-        subtitle: {
-            type: String,
-        },
-        textArea: {
-            type: String,
-        },
         background: {
-            type: String,
-        },
-        leftLabel: {
-            type: String,
-        },
-        centerLabel: {
-            type: String,
-        },
-        rightLabel: {
             type: String,
         },
     },
