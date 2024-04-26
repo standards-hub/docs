@@ -1,6 +1,6 @@
 <template>
     <div class="grid grid-cols-2 gap-4 p-4 mx-auto">
-        <UAvatar size="9xl" :src="avatarSrc" :alt="avatarAlt" class="grayscale justify-self-end tracking-widest " />
+        <img :src="avatarSrc" :alt="avatarAlt" class="grayscale justify-self-end tracking-widest rounded-full size-48" />
         <div class="flex-col -mt-4">
             <div>
                 <p class="text-3xl font-bold grow text-pink-500 bottom-0">{{ name }}</p>
