@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { ref, onMounted, defineComponent } from 'vue';
 
 const carouselRef = ref();
@@ -54,22 +54,28 @@ const items = ref([
     },
 ]);
 
-/*
-
 const props = defineProps({
-    items: {
-        type: Array,
-        required: true
-    }
+    title: {
+        type: String,
+    },
+    subtitle: {
+        type: String,
+    },
 });
-
-*/
 
 </script>
 
 <template>
-    <UCarousel v-slot="{ item }" :items="items" :ui="{ item: 'basis-full md:basis-1/2 lg:basis-1/3 p-3' }" indicators
-        class="rounded-lg overflow-hiddeny" ref="carouselRef">
+    <div>
+        <h1 class="flex justify-center mt-12 -mb-6">
+            {{ title }}
+        </h1>
+        <h2 class="flex justify-center">
+            {{ subtitle }}
+        </h2>
+    </div>
+    <UCarousel v-slot="{ item }" :items="items" :ui="{ item: 'md:basis-1/2 lg:basis-1/3 p-3 mb-9' }"
+        indicators arrows class="rounded-lg overflow-hiddeny" ref="carouselRef">
         <component :is="item.component" v-bind="item.props" class="w-full" draggable="false" />
     </UCarousel>
 </template>
