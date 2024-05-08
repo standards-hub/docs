@@ -5,7 +5,7 @@
     :ui="{ rounded: 'rounded-full' }"
     size="lg"
   >
-    <slot></slot>
+    {{ description }}
   </UBadge>
 </template>
 
@@ -18,6 +18,9 @@ const props = defineProps({
   variant: {
     type: String,
     default: "soft",
+  },
+  description: {
+    type: String,
   },
 });
 </script>

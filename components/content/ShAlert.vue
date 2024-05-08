@@ -1,15 +1,19 @@
 <template>
-  <div id="alert" class="flex items-center space-x-1" :class="alertClasses">
+  <div id="alert" class="flex items-center space-x-1 mt-4 mb-4" :class="alertClasses"><!-- if this div needs to be of a size as text lenght, add w-fit class -->
     <div class="flex items-center mx-2">
       <i :class="iconClass" class="size-6"></i>
     </div>
-    <slot></slot>
+    {{ description }}
   </div>
 </template>
 
 <script>
 export default {
   props: {
+    description: {
+      type: String,
+      required: true,
+    },
     type: {
       type: String,
       default: "info",
